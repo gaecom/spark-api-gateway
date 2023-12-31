@@ -161,3 +161,4 @@ cython_debug/
 
 .chainlit
 config_list.json
+.vercel

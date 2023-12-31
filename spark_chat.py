@@ -101,7 +101,7 @@ class SparkChat(object):
         data = {
             "header": {
                 "app_id": self.app_id,
-                "uid": "verysmallwoods"
+                "uid": "19231011302"
             },
             "parameter": {
                 "chat": {
@@ -174,7 +174,7 @@ class SparkChat(object):
     def chatCompletion(self, messages, temperature=0.7, max_tokens=2048):
         url = self.create_url()
 
-        websocket.enableTrace(False)
+        websocket.enableTrace(True)
 
         ws = websocket.WebSocketApp(
             url,

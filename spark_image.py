@@ -101,7 +101,7 @@ class SparkImage(object):
         data = {
             "header": {
                 "app_id": self.app_id,
-                "uid": "verysmallwoods"
+                #"uid": "verysmallwoods"
             },
             "parameter": {
                 "chat": {

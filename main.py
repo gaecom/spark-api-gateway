@@ -17,7 +17,7 @@ config_dict = load_config_dict()
 
 servers = [
     {
-        "url": "https://sparkai-gateway.vercel.app",
+        "url": "https://spark-ai-gateway.hao.vin",
         "description": "Spark AI Gateway - Staging"
     },
 ]
@@ -88,6 +88,7 @@ def chat_completion(
         )
     else:
         secrets = config_dict.get('spark-ai')
+        print('Crend',X_API_KEY,X_APP_ID,X_API_SECRET)
         spark_client = SparkChat(
             X_APP_ID or secrets["app_id"],
             X_API_KEY or secrets["api_key"],
@@ -155,3 +156,7 @@ async def serve_privacy_policy():
 async def get_openapi_schema():
     openapi_schema = app.openapi()
     return openapi_schema
+
+# if __name__ == "__main__":
+#     import uvicorn
+#     uvicorn.run(app, host='0.0.0.0', port=8082)
